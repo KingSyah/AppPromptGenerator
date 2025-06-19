@@ -32,7 +32,7 @@
 ## 🛠️ Cara Menggunakan
 
 1. Buka [AppPromptGenerator](https://kingsyah.github.io/AppPromptGenerator/)
-2. Pilih jenis prompt yang ingin dibuat (mis. ChatGPT, MidJourney)
+2. Pilih jenis aplikasi yang ingin dibuat
 3. Masukkan input sesuai bidang yang tersedia
 4. Klik **Generate** untuk melihat hasil prompt
 5. Salin dan gunakan prompt tersebut di platform AI favoritmu

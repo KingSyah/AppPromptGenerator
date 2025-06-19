@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Development Prompt Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 App Development Prompt Generator</h1>
+        <p class="subtitle">Buat prompt terstruktur untuk pengembangan aplikasi dengan AI</p>
+        
+        <form id="promptForm">
+            <div class="form-group">
+                <label for="appName">1. Nama Aplikasi</label>
+                <input type="text" id="appName" placeholder="Contoh: TaskMaster Pro">
+            </div>
+            
+            <div class="form-group">
+                <label for="appType">2. Jenis Aplikasi</label>
+                <select id="appType">
+                    <option value="">Pilih jenis aplikasi</option>
+                    <option value="web">Web Application</option>
+                    <option value="mobile">Mobile App</option>
+                    <option value="desktop">Desktop Application</option>
+                    <option value="api">API/Backend Service</option>
+                    <option value="game">Game</option>
+                    <option value="extension">Browser Extension</option>
+                </select>
+            </div>
+            
+            <div class="grid">
+                <div class="form-group">
+                    <label for="targetUsers">3. Target Pengguna</label>
+                    <textarea id="targetUsers" placeholder="Contoh: Profesional muda usia 25-40 tahun yang ingin meningkatkan produktivitas kerja"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mainProblem">4. Masalah Utama yang Diselesaikan</label>
+                    <textarea id="mainProblem" placeholder="Contoh: Kesulitan mengelola task dan deadline yang banyak"></textarea>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="coreFeatures">5. Fitur Inti (pisahkan dengan koma)</label>
+                <textarea id="coreFeatures" placeholder="Contoh: Task management, Calendar integration, Team collaboration, Progress tracking"></textarea>
+            </div>
+            
+            <div class="grid">
+                <div class="form-group">
+                    <label for="techStack">6. Tech Stack yang Diinginkan</label>
+                    <textarea id="techStack" placeholder="Contoh: React, Node.js, MongoDB, Express"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="designStyle">7. Gaya Desain</label>
+                    <select id="designStyle">
+                        <option value="">Pilih gaya desain</option>
+                        <option value="modern-minimal">Modern & Minimal</option>
+                        <option value="corporate">Corporate</option>
+                        <option value="creative">Creative & Colorful</option>
+                        <option value="dark-theme">Dark Theme</option>
+                        <option value="glassmorphism">Glassmorphism</option>
+                        <option value="neumorphism">Neumorphism</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="grid">
+                <div class="form-group">
+                    <label for="userFlow">8. User Flow Utama</label>
+                    <textarea id="userFlow" placeholder="Contoh: Login → Dashboard → Create Task → Set Deadline → Assign Team → Track Progress"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="integrations">9. Integrasi yang Diperlukan</label>
+                    <textarea id="integrations" placeholder="Contoh: Google Calendar, Slack, Email notifications, Cloud storage"></textarea>
+                </div>
+            </div>
+            
+            <div class="grid">
+                <div class="form-group">
+                    <label for="performance">10. Kebutuhan Performa</label>
+                    <textarea id="performance" placeholder="Contoh: Load time < 2 detik, Support 1000+ concurrent users"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="security">11. Kebutuhan Keamanan</label>
+                    <textarea id="security" placeholder="Contoh: User authentication, Data encryption, GDPR compliance"></textarea>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="additionalRequirements">12. Persyaratan Tambahan</label>
+                <textarea id="additionalRequirements" placeholder="Contoh: Responsive design, PWA support, Offline functionality"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="constraints">13. Batasan/Pantangan</label>
+                <textarea id="constraints" placeholder="Contoh: Tidak menggunakan jQuery, Hindari complex animations, Budget terbatas"></textarea>
+            </div>
+            
+            <div class="button-group">
+                <button type="button" class="generate-btn" onclick="generatePrompt()">
+                    🎯 Generate Prompt
+                </button>
+                <button type="button" class="reset-btn" onclick="resetForm()">
+                    🔄 Reset Form
+                </button>
+            </div>
+        </form>
+        
+        <div class="output-section">
+            <div class="output-box">
+                <div class="output-title">
+                    📝 Prompt Bahasa Indonesia
+                    <button class="copy-btn" onclick="copyToClipboard('indonesianPrompt')">Copy</button>
+                </div>
+                <div id="indonesianPrompt" class="prompt-output">Prompt akan muncul di sini setelah Anda mengisi form dan klik "Generate Prompt"</div>
+            </div>
+            
+            <div class="output-box">
+                <div class="output-title">
+                    🌍 English Prompt
+                    <button class="copy-btn" onclick="copyToClipboard('englishPrompt')">Copy</button>
+                </div>
+                <div id="englishPrompt" class="prompt-output">English prompt will appear here after you fill the form and click "Generate Prompt"</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; <span id="currentYear"></span> Laboratorium Teknik Elektro dan Komputer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
